@@ -11,7 +11,8 @@ export const SITE = {
   cfxCode: "",
   maxPlayers: 64,                    // utilisé si l'API ne répond pas
   // Vidéo de fond du haut de page (muette, en boucle). Dépose le fichier dans
-  // public/media/ puis mets son chemin, ex: "/media/hero.mp4". Vide = pas de vidéo.
+  // public/media/ puis mets son chemin, ex: "/media/hero.mp4",
+  // ou colle un lien YouTube (ex: "https://www.youtube.com/watch?v=..."). Vide = pas de vidéo.
   heroVideo: "",
 };
 

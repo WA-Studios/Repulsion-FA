@@ -463,3 +463,12 @@ footer { border-top: 1px solid var(--hair); padding: 34px 0; margin-top: 60px; }
 }
 .hero-video.ready { opacity: 1; }
 .hero-word span { display: inline-block; will-change: transform; }
+/* Lecteur YouTube en fond : agrandi pour couvrir tout le haut de page (16:9) */
+.hero-bg { container-type: size; }
+.hero-yt {
+  position: absolute; top: 50%; left: 50%; translate: -50% -50%;
+  width: max(100cqw, 177.78cqh); height: max(100cqh, 56.25cqw);
+  border: 0; pointer-events: none;
+  opacity: 0; transition: opacity 1.2s var(--ease);
+}
+.hero-yt.ready { opacity: 1; }
