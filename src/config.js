@@ -12,6 +12,14 @@ export const SITE = {
   maxPlayers: 64,                    // utilisé si l'API ne répond pas
 };
 
+// Bandeau de chiffres sous le haut de page — À REMPLACER par tes vrais chiffres
+export const STATS = [
+  { value: SITE.maxPlayers, label: "Places en ville" },
+  { value: 30, suffix: "+", label: "Métiers et activités" },
+  { value: 100, suffix: " %", label: "Scripts maison" },
+  { value: 24, suffix: "h/24", label: "Serveur ouvert" },
+];
+
 export const joinUrl = SITE.cfxCode
   ? `fivem://connect/cfx.re/join/${SITE.cfxCode}`
   : SITE.discord;

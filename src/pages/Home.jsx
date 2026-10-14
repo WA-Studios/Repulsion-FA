@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
-import { SITE, joinUrl } from "../config.js";
+import { SITE, STATS, joinUrl } from "../config.js";
 import useServerStatus from "../hooks/useServerStatus.js";
 import useReveal from "../hooks/useReveal.js";
 import Card from "../components/Card.jsx";
 import TypedTitle from "../components/TypedTitle.jsx";
 import HeroLogo from "../components/HeroLogo.jsx";
 import GoldParticles from "../components/GoldParticles.jsx";
+import Stats from "../components/Stats.jsx";
 import { StatusDot } from "../components/Nav.jsx";
 import { Code, Users, Dollar, Bolt, Bag, Star, Gift, Trophy } from "../components/Icons.jsx";
 
@@ -78,6 +79,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* CHIFFRES */}
+      <Stats items={STATS} />
 
       {/* UNIVERS */}
       <section className="block" style={{ paddingBottom: 40 }}>
