@@ -3,6 +3,9 @@ import { SITE, joinUrl } from "../config.js";
 import useServerStatus from "../hooks/useServerStatus.js";
 import useReveal from "../hooks/useReveal.js";
 import Card from "../components/Card.jsx";
+import TypedTitle from "../components/TypedTitle.jsx";
+import HeroLogo from "../components/HeroLogo.jsx";
+import GoldParticles from "../components/GoldParticles.jsx";
 import { StatusDot } from "../components/Nav.jsx";
 import { Code, Users, Dollar, Bolt, Bag, Star, Gift, Trophy } from "../components/Icons.jsx";
 
@@ -51,11 +54,12 @@ export default function Home() {
       <section className="hero">
         <div className="hero-bg" />
         <div className="hero-word">{SITE.shortName}</div>
-        <img className="hero-char" src="/media/logo.webp" alt={`Logo ${SITE.name}`} />
+        <GoldParticles />
+        <HeroLogo alt={`Logo ${SITE.name}`} />
         <div className="page">
           <div className="hero-inner">
             <span className="eyebrow">{SITE.tagline}</span>
-            <h1>Ta ville.<br /><span className="grad">Ton histoire.</span></h1>
+            <TypedTitle line1="Ta ville." line2="Ton histoire." />
             <p>Un serveur pensé pour le roleplay, avec des scripts développés et maintenus par l'équipe. Fluide, stable, et une staff qui écoute vraiment les retours.</p>
             <div className="hero-cta">
               <a className="btn btn-primary" href={SITE.discord} {...ext}>Rejoindre le Discord</a>
