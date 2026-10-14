@@ -454,3 +454,12 @@ footer { border-top: 1px solid var(--hair); padding: 34px 0; margin-top: 60px; }
   .route-in, .route-veil, .breathe { animation: none; }
   .route-veil { display: none; }
 }
+
+/* ---------- Vidéo de fond + parallaxe du grand mot ---------- */
+.hero-bg::after { z-index: 1; }
+.hero-video {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; transition: opacity 1.2s var(--ease);
+}
+.hero-video.ready { opacity: 1; }
+.hero-word span { display: inline-block; will-change: transform; }

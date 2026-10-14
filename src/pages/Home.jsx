@@ -7,6 +7,7 @@ import TypedTitle from "../components/TypedTitle.jsx";
 import HeroLogo from "../components/HeroLogo.jsx";
 import GoldParticles from "../components/GoldParticles.jsx";
 import Stats from "../components/Stats.jsx";
+import HeroBackground from "../components/HeroBackground.jsx";
 import { StatusDot } from "../components/Nav.jsx";
 import { Code, Users, Dollar, Bolt, Bag, Star, Gift, Trophy } from "../components/Icons.jsx";
 
@@ -53,8 +54,7 @@ export default function Home() {
     <main>
       {/* HERO */}
       <section className="hero">
-        <div className="hero-bg" />
-        <div className="hero-word">{SITE.shortName}</div>
+        <HeroBackground />
         <GoldParticles />
         <HeroLogo alt={`Logo ${SITE.name}`} />
         <div className="page">

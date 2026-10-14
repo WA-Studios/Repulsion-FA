@@ -10,6 +10,9 @@ export const SITE = {
   // Laisse vide pour masquer le compteur de joueurs.
   cfxCode: "",
   maxPlayers: 64,                    // utilisé si l'API ne répond pas
+  // Vidéo de fond du haut de page (muette, en boucle). Dépose le fichier dans
+  // public/media/ puis mets son chemin, ex: "/media/hero.mp4". Vide = pas de vidéo.
+  heroVideo: "",
 };
 
 // Bandeau de chiffres sous le haut de page — À REMPLACER par tes vrais chiffres
