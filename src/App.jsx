@@ -2,6 +2,8 @@ import { useEffect } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Nav from "./components/Nav.jsx";
 import Footer from "./components/Footer.jsx";
+import Intro from "./components/Intro.jsx";
+import RouteVeil from "./components/RouteVeil.jsx";
 import Home from "./pages/Home.jsx";
 import Reglement from "./pages/Reglement.jsx";
 import { SITE } from "./config.js";
@@ -29,13 +31,17 @@ export default function App() {
 
   return (
     <>
+      <Intro />
       <ScrollManager />
       <Nav />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/reglement" element={<Reglement />} />
-        <Route path="*" element={<Home />} />
-      </Routes>
+      <div className="route-in" key={pathname}>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/reglement" element={<Reglement />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </div>
+      <RouteVeil />
       <Footer />
     </>
   );

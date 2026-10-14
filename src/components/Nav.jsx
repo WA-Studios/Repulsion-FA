@@ -30,7 +30,7 @@ export default function Nav() {
             <StatusDot status={status} />{status.players}/{status.max}
           </div>
         )}
-        <a className="btn btn-primary btn-sm" href={SITE.discord} target="_blank" rel="noopener noreferrer">
+        <a className="btn btn-primary btn-sm breathe" href={SITE.discord} target="_blank" rel="noopener noreferrer">
           <Discord /> Discord
         </a>
       </div>

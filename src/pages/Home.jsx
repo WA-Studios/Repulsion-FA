@@ -63,7 +63,7 @@ export default function Home() {
             <TypedTitle line1="Ta ville." line2="Ton histoire." />
             <p>Un serveur pensé pour le roleplay, avec des scripts développés et maintenus par l'équipe. Fluide, stable, et une staff qui écoute vraiment les retours.</p>
             <div className="hero-cta">
-              <a className="btn btn-primary" href={SITE.discord} {...ext}>Rejoindre le Discord</a>
+              <a className="btn btn-primary breathe" href={SITE.discord} {...ext}>Rejoindre le Discord</a>
               <a className="btn" href={joinUrl}>Se connecter en jeu</a>
               <Link className="btn" to="/reglement#documentation">Lire la documentation</Link>
             </div>
@@ -171,7 +171,7 @@ export default function Home() {
           <div className="cta reveal">
             <h2>Rejoins l'aventure.</h2>
             <p>Annonces, ouverture, recrutements : tout se passe sur le Discord de {SITE.name}.</p>
-            <a className="btn btn-primary" href={SITE.discord} {...ext}>Rejoindre le Discord</a>
+            <a className="btn btn-primary breathe" href={SITE.discord} {...ext}>Rejoindre le Discord</a>
           </div>
         </div>
       </section>
