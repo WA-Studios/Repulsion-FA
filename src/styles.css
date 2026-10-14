@@ -153,10 +153,8 @@ a { color: inherit; text-decoration: none; }
 .head p { margin-top: 16px; color: var(--text-soft); }
 
 /* Strip / marquee */
-.strip { overflow: hidden; padding: 20px 0 10px; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
-.strip-track { display: flex; gap: 18px; width: max-content; animation: scroll 50s linear infinite; }
-.strip:hover .strip-track { animation-play-state: paused; }
-@keyframes scroll { to { transform: translateX(calc(-50% - 9px)); } }
+.strip { overflow: hidden; padding: 26px 0 26px; mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.strip-track { display: flex; gap: 18px; width: max-content; will-change: transform; }
 .shot {
   position: relative; width: 340px; aspect-ratio: 16 / 10; flex: none;
   border-radius: var(--r); overflow: hidden;
@@ -273,7 +271,7 @@ footer { border-top: 1px solid var(--hair); padding: 34px 0; margin-top: 60px; }
   .hero-cta .btn { flex: 1 1 100%; justify-content: center; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .strip-track, .dot.on { animation: none; }
+  .dot.on { animation: none; }
   .reveal { opacity: 1; transform: none; }
 }
 
@@ -472,3 +470,25 @@ footer { border-top: 1px solid var(--hair); padding: 34px 0; margin-top: 60px; }
   opacity: 0; transition: opacity 1.2s var(--ease);
 }
 .hero-yt.ready { opacity: 1; }
+
+/* ---------- Image survolée dans la bande ---------- */
+.shot { transition: transform .5s var(--ease), border-color .3s, box-shadow .4s var(--ease); }
+.shot:hover {
+  transform: scale(1.07); z-index: 1;
+  border-color: var(--violet-bright);
+  box-shadow: 0 0 0 1px rgba(245, 194, 66, .6), 0 18px 40px rgba(217, 154, 30, .35);
+}
+.shot:hover span { background: var(--violet-bright); color: #140e02; }
+.shot span { transition: background .3s, color .3s; }
+
+/* ---------- Curseur doré ---------- */
+.gold-cursor {
+  position: fixed; left: 0; top: 0; z-index: 2000; pointer-events: none;
+  width: 34px; height: 34px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 224, 138, .55) 0%, rgba(245, 194, 66, .22) 45%, transparent 70%);
+  mix-blend-mode: screen;
+  opacity: 0; transition: opacity .3s, width .3s var(--ease), height .3s var(--ease);
+}
+.gold-cursor.on { opacity: 1; }
+.gold-cursor.hot { width: 64px; height: 64px; }
+.gold-cursor.press { width: 24px; height: 24px; }

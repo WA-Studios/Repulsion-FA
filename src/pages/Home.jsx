@@ -7,6 +7,7 @@ import TypedTitle from "../components/TypedTitle.jsx";
 import HeroLogo from "../components/HeroLogo.jsx";
 import GoldParticles from "../components/GoldParticles.jsx";
 import Stats from "../components/Stats.jsx";
+import Strip from "../components/Strip.jsx";
 import HeroBackground from "../components/HeroBackground.jsx";
 import { StatusDot } from "../components/Nav.jsx";
 import { Code, Users, Dollar, Bolt, Bag, Star, Gift, Trophy } from "../components/Icons.jsx";
@@ -40,9 +41,6 @@ const EXTRAS = [
   { icon: <Gift />, title: "Mystery Box", text: "Des lots surprises ouverts en live sur le Discord." },
   { icon: <Trophy />, title: "Giveaways", text: "Réguliers, annoncés à l'avance et ouverts à tous." },
 ];
-
-// Image manquante : on garde le fond dégradé
-const hideOnError = (e) => { e.currentTarget.style.visibility = "hidden"; };
 
 const ext = { target: "_blank", rel: "noopener noreferrer" };
 
@@ -89,16 +87,7 @@ export default function Home() {
           <span className="eyebrow">L'univers</span>
           <h2>Un aperçu de la ville.</h2>
         </div>
-        <div className="strip">
-          <div className="strip-track">
-            {[...SHOTS, ...SHOTS].map((s, i) => (
-              <div className="shot" key={i} aria-hidden={i >= SHOTS.length}>
-                <img src={s.src} alt="" loading="lazy" onError={hideOnError} />
-                <span>{s.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+        <Strip shots={SHOTS} />
       </section>
 
       {/* ATOUTS */}

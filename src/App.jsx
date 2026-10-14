@@ -4,6 +4,7 @@ import Nav from "./components/Nav.jsx";
 import Footer from "./components/Footer.jsx";
 import Intro from "./components/Intro.jsx";
 import RouteVeil from "./components/RouteVeil.jsx";
+import GoldCursor from "./components/GoldCursor.jsx";
 import Home from "./pages/Home.jsx";
 import Reglement from "./pages/Reglement.jsx";
 import { SITE } from "./config.js";
@@ -43,6 +44,7 @@ export default function App() {
       </div>
       <RouteVeil />
       <Footer />
+      <GoldCursor />
     </>
   );
 }
